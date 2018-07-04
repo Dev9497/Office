@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="activity_hello_user_binder"
+            type="com.example.office.viewmodel.HelloUserViewmodel"/>
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#413e4f"
+        tools:context=".view.HelloUserActivity">
+
+        <TextView
+            android:id="@+id/tv_hello"
+            android:layout_width="240dp"
+            android:layout_height="102dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="65dp"
+            android:gravity="center|center_horizontal"
+            android:text="Hello"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/btn_display_emp"
+            android:layout_width="260dp"
+            android:layout_height="36dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_btn"
+            android:text="Display client database"
+            android:onClick="@{activity_hello_user_binder::onClientClicked}"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="257dp"
+            android:layout_height="34dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="205dp"
+            android:background="@drawable/rounded_btn"
+            android:text="Logout"
+            android:onClick="@{activity_hello_user_binder::onLogoutClicked}"/>
+
+    </RelativeLayout>
+</layout>
